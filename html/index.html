@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>INTRODUCCIÓN A BOOTSTRAP</title>
+
+    <link rel="stylesheet" href="../CSS/sentinels.css">
+
+    <!-- ESTO ES EL CSS DE BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- ESTO ES EL CSS DE BOOTSTRAP -->
+
+    <style>
+        .columna {
+            background: rgb(204, 255, 192);
+            border: 1px solid black;
+        }
+
+        .row {
+            background-color: rgba(87, 255, 255, 0.404);
+        }
+
+        #barraop {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        #footercontent {
+            list-style-type: none;
+            gap: 16px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+
+        <!--ROW HOLA CONTIENE EL HEADER -->
+
+        <div class="row">
+
+            <div class="columna col-2 logoheather">
+                <div>LOGO SIMA</div>
+            </div>
+
+            <div class="columna col-8">
+                <div class="row">
+                    <header>
+                        <nav>
+                            <ul id="barraop" style="justify-items: center;">
+                                <li>Portfolio</li>
+                                <li>About</li>
+                                <li>Contact</li>
+                            </ul>
+                        </nav>
+                    </header>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- IMGEN DESPUÉS DEL HEATHER -->
+    <div class="container-fluid" style="width: 95%;">
+
+        <div class="row">
+            <div class="columna col-6">
+                <div class="row">
+                    <h1>HI I'M SIMA</h1>
+                </div>
+                <div class="row">
+                    <h3>A Digital Interaction Designer.</h3>
+                </div>
+                <div class="row">Diseño de experiencias intuitivas, funcionales y creativas.</div>
+            </div>
+            <div class="columna col-6">
+                <div class="row">MODELO 3D</div>
+            </div>
+        </div>
+
+        <!-- TEXTO MEET OUR TEAMS -->
+        <div class="row">
+            <div class="columna col-2">INTERACTIVE DEVELOPER</div>
+            <div class="columna col-10">
+                IMG
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="columna col-10">
+                IMG
+            </div>
+            <div class="columna col-2">INTERACTIVE TECHNOLOGY</div>
+        </div>
+
+        <div class="row">
+            <div class="columna col-2">GRAPHIC ARTS</div>
+            <div class="columna col-10">
+                IMG
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="foooter row">
+
+            <div class="col-2 d-sm-block columna"></div>
+
+            <div class="col-sm-12 col-md-5 columna">
+                <div class="row">CONTACTO</div>
+                <div class="row">¡Trabajemos juntos en las experiencias que deseas crear!</div>
+                <div class="row">©2024 SIMA</div>
+            </div>
+
+
+
+            <div class="col-sm-12 col-md-5 columna">
+
+                <nav>
+                    <ul id="footercontent">
+                        <li>Encuentrame aquí</li>
+                        <li>Figma</li>
+                        <li>GitHub</li>
+                        <li>Instagram</li>
+                    </ul>
+                </nav>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>
