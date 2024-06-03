@@ -1,0 +1,11 @@
+
+/* Vector 7 */
+.vector-7 {
+    position: absolute;
+    width: 1304px;
+    height: 400px;
+    left: calc(50% - 1304px/2);
+    top: 1000px;
+    background: #ff4848;
+    border-radius: 30px;
+}
