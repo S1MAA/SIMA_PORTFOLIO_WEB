@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@660&display=swap');
 
 .pop-medium {
     font-family: "Poppins", sans-serif;
@@ -11,6 +12,55 @@
     font-weight: 700;
     font-style: normal;
 }
+
+
+body {
+    background: linear-gradient(180deg, #D2F6DA 20%, #C7F4DD 63.29%, #FFFFFF 100%);
+}
+
+.logoheather {
+    width: 60%;
+    margin: 20px 10%;
+}
+
+body h1 {
+    font-size: 110px;
+    font-family: "Fredoka", sans-serif;
+    color: #015944;
+}
+
+.h3-frase {
+    font-size: 48px;
+    font-family: "Fredoka", sans-serif;
+    color: #008F75;
+}
+
+.h3-title {
+    font-size: 48px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #023529;
+}
+
+.h2-title {
+    font-size: 60px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #023529;
+}
+
+.experiencia {
+    background-color: #ffffffd2;
+}
+
+p {
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #023529;
+}
+
+
 
 #sinlista {
     list-style-type: none;
@@ -38,6 +88,8 @@
     display: flex;
     scroll-snap-type: x mandatory;
     width: 100%;
+    min-width: 90%;
+    justify-content: left;
 }
 
 .card {
@@ -49,7 +101,7 @@
     padding: 2rem;
     margin: 1rem;
     width: 100%;
-    flex: 0 0 400px;
+    flex: 0 0 450px;
 }
 
 .title {
@@ -82,4 +134,28 @@
     width: 100%;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+}
+
+@media (max-width: 600px) {
+
+    .logoheather {
+        width: 100%;
+    }
+
+    .card {
+        flex: 0 0 95%;
+    }
+
+    .card__title {
+        font-size: 24px; /* Tamaño de fuente para pantallas pequeñas */
+    }
+
+    .card__describe {
+        font-size: 16px; /* Tamaño de fuente para pantallas pequeñas */
+    }
+
+    .card__subtitle {
+        font-size: 16px; /* Tamaño de fuente para pantallas pequeñas */
+    }
+
 }
