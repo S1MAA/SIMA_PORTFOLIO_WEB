@@ -23,11 +23,52 @@ body {
     margin: 20px 10%;
 }
 
+
+#sinlista {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.top-bar {
+    justify-items:center;
+    gap: 20%;
+    margin-top: 100px;
+    color:#023529;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+/* RECTANGULO CON CURVAS */
+
+.rectangulo {
+    width: 200px;
+    height: 400px;
+    background-color: #008F75;
+    border-radius: 200px 200px 10px 10px;
+    color: #008F75;
+    display: grid;
+    place-items: center;
+}
+
+.descripcion {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+/* IM SIMA */
+
 body h1 {
     font-size: 110px;
     font-family: "Fredoka", sans-serif;
     color: #015944;
 }
+
+/* FRASE */
 
 .h3-frase {
     font-size: 48px;
@@ -35,15 +76,11 @@ body h1 {
     color: #008F75;
 }
 
+
+/* SOBRE MI */
+
 .h3-title {
     font-size: 48px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    color: #023529;
-}
-
-.h2-title {
-    font-size: 60px;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: #023529;
@@ -62,11 +99,16 @@ p {
 
 
 
-#sinlista {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 16px;
+
+.h2-title {
+    font-size: 60px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #023529;
+}
+
+.descubre {
+margin: 50px 0px 50px 0px;
 }
 
 
@@ -138,8 +180,33 @@ p {
 
 @media (max-width: 600px) {
 
+    body h1 {
+        font-size: 60px;
+    }
+
+    .h3-frase {
+        font-size: 34px;
+    }
+
+    .h2-title {
+        font-size: 34px;
+    }
+
+    .descubre {
+        margin: 20px 0px 5px 0px;
+    }
+        
+
+    .h3-title {
+        font-size: 34px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
     .logoheather {
-        width: 100%;
+        width: 150%;
     }
 
     .card {
