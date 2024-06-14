@@ -38,18 +38,25 @@ body {
     color:#023529;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+    margin-bottom: 10%;
 }
 
 /* RECTANGULO CON CURVAS */
 
 .rectangulo {
-    width: 200px;
-    height: 400px;
+    width: 450px;
+    height: 550px;
     background-color: #008F75;
-    border-radius: 200px 200px 10px 10px;
+    border-radius: 300px 300px 10px 10px;
     color: #008F75;
     display: grid;
     place-items: center;
+    margin-bottom: 10%;
+}
+
+.rectangulo .rounded-circle {
+    width: 90%; /* Ajusta este valor al tamaño deseado */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
 .descripcion {
@@ -136,9 +143,7 @@ margin: 50px 0px 50px 0px;
 
 .card {
     background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 4px 8px 0 rgba(1, 89, 68, 0.37);
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
+    border-color: #FFFFFF !important;
     border-radius: 30px !important; 
     padding: 2rem;
     margin: 1rem;
@@ -194,8 +199,7 @@ margin: 50px 0px 50px 0px;
 
     .descubre {
         margin: 20px 0px 5px 0px;
-    }
-        
+    }       
 
     .h3-title {
         font-size: 34px;
