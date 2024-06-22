@@ -18,9 +18,18 @@ body {
     background: linear-gradient(180deg, #D2F6DA 20%, #C7F4DD 63.29%, #FFFFFF 100%);
 }
 
+.navigation-bar{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 10px;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
 .logoheather {
-    width: 60%;
-    margin: 20px 10%;
+    width: 126px;
+    margin: 20px;
 }
 
 
@@ -28,17 +37,16 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 30px;
 }
 
 .top-bar {
     justify-items:center;
-    gap: 20%;
-    margin-top: 100px;
+    margin-top: 20px;
     color:#023529;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    margin-bottom: 10%;
+    margin-bottom: 10px;
 }
 
 /* RECTANGULO CON CURVAS */
@@ -104,9 +112,6 @@ p {
     color: #023529;
 }
 
-
-
-
 .h2-title {
     font-size: 60px;
     font-family: "Poppins", sans-serif;
@@ -117,8 +122,6 @@ p {
 .descubre {
 margin: 50px 0px 50px 0px;
 }
-
-
 
 /* CARRUSEL CON CARDS */
 
@@ -132,12 +135,13 @@ margin: 50px 0px 50px 0px;
     background: #008F75;
 }
 
+
 .container-cards {
     overflow: auto;
     display: flex;
     scroll-snap-type: x mandatory;
     width: 100%;
-    min-width: 90%;
+    min-width: 100%;
     justify-content: left;
 }
 
@@ -147,9 +151,9 @@ margin: 50px 0px 50px 0px;
     border-radius: 30px !important; 
     padding: 2rem;
     margin: 1rem;
-    width: 100%;
-    flex: 0 0 450px;
+    flex: 1 1 23%;
 }
+
 
 .title {
     width: 100%;
@@ -165,14 +169,6 @@ margin: 50px 0px 50px 0px;
 .card__title {
     font-size: 34px;
     color: #008F75;
-    text-transform: capitalize;
-}
-
-.card_subtitle {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    color: #008F75;
-    font-size: 20px;
 }
 
 .card__describe {
@@ -183,7 +179,140 @@ margin: 50px 0px 50px 0px;
     font-weight: 500;
 }
 
-@media (max-width: 600px) {
+
+/* FOOTER */
+
+.rec-background{
+    width: 100%;
+    height: 400px;
+    background-color:#015944;
+    border-radius: 50px 50px 0px 0px;
+    margin-top: 5%;    
+}
+
+.rec-cont-footer{
+    width: 640px;
+    height: 200px;
+    background-color:#ffffff;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.redes {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.footer-redes{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.img-footer{
+    width: 24px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.img-figma{
+    width: 20px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* BOTÓN */
+button {
+    --primary-color: #645bff;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+}
+
+button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+
+button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+    background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+    right: 0;
+}
+
+
+
+@media (max-width: 1400px) {
+    .card {
+        flex: 0 0 31%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        flex: 0 0 47%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 95%;
+    }
+}
+/* FIN CARRUSEL CON CARDS */
+
+@media (max-width: 768px) {
+    .rectangulo {
+        width: 350px;
+        height: 420px;
+        background-color: #008F75;
+    }
 
     body h1 {
         font-size: 60px;
@@ -210,11 +339,8 @@ margin: 50px 0px 50px 0px;
     }
 
     .logoheather {
-        width: 150%;
-    }
-
-    .card {
-        flex: 0 0 95%;
+        width: 100px;
+        margin: 20px;
     }
 
     .card__title {
