@@ -8,20 +8,6 @@
 
     <link rel="stylesheet" href="../CSS/style.css" />
 
-    <!-- NUEVO CARRUSEL -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-      crossorigin="anonymous"
-    ></script>
-    <!-- NUEVO CARRUSEL -->
-
     <!-- ESTO ES EL CSS DE BOOTSTRAP -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
@@ -33,35 +19,8 @@
   </head>
 
   <body>
-    <div class="container-fluid navigation-bar">
-      <!--ROW HOLA CONTIENE EL HEADER -->
 
-      <div class="row">
-        <div class="col-2">
-          <img class="logoheather" src="../img/logotipo_sima.svg" />
-        </div>
-
-        <div class="col-8">
-          <div class="row">
-            <header>
-              <nav>
-                <ul id="sinlista" class="top-bar">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Portafolio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre Mí</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                  </li>
-                </ul>
-              </nav>
-            </header>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="header"></div>
 
     <!-- CONTENIDO -->
     <div class="container-fluid" style="width: 95%">
@@ -80,7 +39,7 @@
             </div>
             <div class="row descripcion">
               Sofía Isidora Muñoz Arias <br />
-              Santiago de Chile.
+              Ubicada en Santiago de Chile.
             </div>
           </div>
         </div>
@@ -197,35 +156,44 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
-    <div class="container-fluid rec-background">
-      <div class="foooter row">
-        <div class="col-sm-12 col-md-8">
-          <div class="row rec-cont-footer g-0">
-            <div class="col-sm-7 col-xs-12 pop-medium work_to">
-              ¡Trabajemos juntos en las
-              experiencias que deseas crear!
-            </div>
-            <div class="col-sm-4 col-xs-12">
-              <button class="boton">Contáctame!</button>
-            </div>
-          </div>
-        </div>
+    <div id="footer"></div>
 
-        <div class="col-sm-12 col-md-4" style="padding-left: 5%;">
-          <div class="redes">Encuéntrame aquí</div>
-          <nav>
-            <ul class="footer-redes" style="list-style-type: none">
-              <li><img class="img-figma" src="../img/figma.png" />Figma</li>
-              <li><img class="img-footer" src="../img/github.png" />GitHub</li>
-              <li>
-                <img class="img-footer" src="../img/instagram.png" />Instagram
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="col-12 pop-light sima-2024">©2024 SIMA</div>
-      </div>
-    </div>
+    <script>
+        async function loadHTML(id, url) {
+          const response = await fetch(url);
+          const text = await response.text();
+          document.getElementById(id).innerHTML = text;
+        }
+  
+        async function initialize() {
+          await loadHTML("header", "header.html");
+          await loadHTML("footer", "footer.html");
+          disableCurrentNavLink();
+        }
+  
+        function disableCurrentNavLink() {
+          const currentPath = window.location.pathname;
+          console.log('Ruta actual:', currentPath); // Depuración
+  
+          const links = document.querySelectorAll('.nav-link');
+  
+          links.forEach(link => {
+            const linkPath = link.getAttribute('href');
+            console.log('Comparando con:', linkPath); // Depuración
+  
+            const normalizedCurrentPath = currentPath.replace(/\/$/, '');
+            const normalizedLinkPath = linkPath.replace(/\/$/, '');
+  
+            if (normalizedCurrentPath === normalizedLinkPath) {
+              console.log('Deshabilitando enlace:', linkPath); // Depuración
+              link.classList.add('disabled');
+              link.removeAttribute('href');
+            }
+          });
+        }
+  
+        document.addEventListener('DOMContentLoaded', initialize);
+      </script>
+    
   </body>
 </html>

@@ -24,10 +24,19 @@ body {
     background: linear-gradient(180deg, #D2F6DA 20%, #C7F4DD 63.29%, #FFFFFF 100%);
 }
 
-.navigation-bar{
+.disabled {
+    pointer-events: none !important;
+    color: #008F75 !important;
+    background-color:#ffffff !important;
+    border-radius: 30px 30px 30px 30px !important;
+    width: 100% !important;
+}
+
+#header {
     background: transparent;
     backdrop-filter: blur(10px);
     position: sticky;
+    position: -webkit-sticky;
     top: 10px;
     margin-bottom: 10px;
     z-index: 1;
@@ -256,6 +265,7 @@ margin: 50px 0px 50px 0px;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    text-decoration: none;
 
 }
 
