@@ -304,6 +304,11 @@ margin: 50px 0px 50px 0px;
     .card {
         flex: 0 0 47%;
     }
+
+    .disabled {
+        background-color:#ffffff !important;
+        border-radius: 10px 10px 10px 10px !important;
+    }
 }
 
 @media (max-width: 768px) {
