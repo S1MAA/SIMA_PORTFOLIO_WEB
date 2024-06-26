@@ -22,29 +22,58 @@
 
     <!-- CONTENIDO -->
     <div class="container">
-
-        <div class="row"> 
-          <p class="text-center contacto-text">
-            Soy una diseñadora apasionada por el arte, la tecnología y la innovación, mi propósito es ayudarte a construir experiencias memorables. ¿Tienes un proyecto en mente? ¡Trabajemos juntos para hacerlo realidad!
-          </p>
-        </div>
-        <div class="row justify-content-evenly">
-            <div class="col-md-4 col-sm-12 columna">
-                <div class="row">
-                    <div class="col-12 columna">CONTACTO</div>
-                    <div class="col-12">Name</div>
-                    <div class="col-12">Email</div>
-                    <div class="col-12">Message</div>
-                </div>
-            </div>
-            <div class="col-md-4 d-sm-block columna"></div>
-            <div class="col-md-4 col-sm-12 order-last order-sm-0 columna">
-                INFO
-            </div>
-            <div class="col-12 columna">ENVIAR</div>
-        </div>
-
+        <p class="text-center contacto-text">
+          Soy una diseñadora apasionada por el arte, la tecnología y la innovación, mi propósito es ayudarte a construir experiencias memorables. ¿Tienes un proyecto en mente? ¡Trabajemos juntos para hacerlo realidad!
+        </p>
     </div>
+
+    <div class="container contacto-box">
+      <h3 class="h3-title">
+          CONTACTO
+      </h3>
+      <div class="rectangulo-pequeno">
+          <div class="info poppins-bold col-12">Info</div>
+          <div class="info-lista pop-medium" style="list-style-type: none">
+            <div><img class="img-info" src="../img/gmail.png"/>sofia.munoz.a@gmail.com</div>
+            <div><img class="img-info" src="../img/ubicacion.png" />Santiago de Chile.</div>
+          </div>
+      </div>
+      <form action="#">
+          <div class="form-row">
+              <div class="input-data">
+                  <input type="text" required>
+                  <div class="underline"></div>
+                  <label for="">Nombre Completo</label>
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="input-data">
+                  <input type="text" required>
+                  <div class="underline"></div>
+                  <label for="">Email</label>
+              </div>
+          </div>
+          <div class="form-row">
+              <div class="input-data textarea">
+                  <textarea rows="8" cols="80" required></textarea>
+                  <br />
+                  <div class="underline downline"></div>
+                  <label for="">Mensaje</label>
+                  <br />
+                  <button class="boton-enviar" onclick="window.location.href=''">ENVIAR</button>
+              </div> <!-- Cierre del .input-data .textarea -->
+          </div> <!-- Cierre del .form-row -->
+      </form>
+    </div> <!-- Cierre del .container contacto-box -->
+  
+
+      <div class="rectangulo-info container">
+        <div class="info poppins-bold col-12">Info</div>
+        <div class="info-lista-movil pop-medium" style="list-style-type: none">
+          <div><img class="img-info" src="../img/gmail.png"/>sofia.munoz.a@gmail.com</div>
+          <div><img class="img-info" src="../img/ubicacion.png" />Santiago de Chile.</div>
+        </div>
+      </div>
 
 
         <!-- FOOTER -->

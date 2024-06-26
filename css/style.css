@@ -20,6 +20,8 @@
 }
 
 
+
+
 body {
     background: linear-gradient(180deg, #D2F6DA 20%, #C7F4DD 63.29%, #FFFFFF 100%);
 }
@@ -386,6 +388,43 @@ margin: 50px 0px 50px 0px;
         padding: 10% !important;
     }
 
+    .container .text{
+        font-size: 30px;
+    }
+    .container form{
+        padding: 0px 0 0 0;
+    }
+    .container form .form-row{
+        display: block;
+    }
+    .submit-btn .input-data{
+        width: 40%!important;
+    }
+
+    .rectangulo-pequeno {
+        display: none;
+    }
+
+    .input-data input,
+.text text{
+    width: 100% !important;
+}
+
+    .contacto-box{
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 30px 30px 0px 0px !important;
+    }
+
+    .input-data .underline:before{
+        width: 100% !important;
+    }
+
+    .rectangulo-info{
+        display: block !important;
+    }
+
+
 }
 
 
@@ -393,6 +432,238 @@ margin: 50px 0px 50px 0px;
 
 
 
+
+ /* PAGINA CONTACTO */
 .contacto-text {
     margin: 10% 0% 10% 0% !important;
 }
+
+
+.rectangulo-info{
+    width: 100%;
+    height: 20%;
+    background-color: #008F75;
+    border-radius: 0px 0px 30px 30px;
+    position: relative;
+    display: none;
+}
+
+.info-lista-movil{
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.rectangulo-pequeno {
+    width: 40%;
+    height: 48%;
+    background-color: #008F75;
+    border-radius: 30px 30px 0px 30px;
+    position: absolute;
+    top: 0; 
+    right: 0;
+    padding: 2%;
+}
+
+.info {
+    font-size: 34px;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+.info-lista{
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.img-info{
+    width: 40px;
+    height: auto;
+    margin: 10px 10px 20px;
+}
+
+
+
+
+.contacto-box{
+    max-width: 800px; /*ANCHOOOOOO*/
+    background: #fff;
+    border-radius: 30px;
+    height: 450px;
+    width: 90%;
+    padding: 25px 40px 10px 40px !important;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+
+.container form{
+    padding: 0px 0 0 0;
+}
+.container form .form-row{
+    display: flex;
+    margin: 32px 0;
+}
+form .form-row .input-data{
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+}
+form .form-row .textarea{
+    height: 70px;
+}
+.input-data input,
+.textarea textarea{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    border-bottom: 4px solid  #023529;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-data input,
+.text text{
+    display: block;
+    width: 55%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    font-size: 17px;
+    border-bottom: 4px solid  #023529;
+}
+
+.input-data input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #008F75;
+}
+.textarea textarea{
+    resize: none;
+    padding-top: 10px;
+    color: #023529;
+}
+.input-data label{
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    color: #023529;
+}
+.textarea label{
+    width: 100%;
+    bottom: 40px;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+    color: #023529;
+}
+.input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+}
+.input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 55%;
+    background: #008F75;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-data .downline:before{
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 100%;
+    background: #008F75;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before{
+    transform: scale(1);
+}
+.submit-btn .input-data{
+    overflow: hidden;
+    height: 45px!important;
+    width: 25%!important;
+}
+.submit-btn .input-data .inner{
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+    transition: all 0.4s;
+}
+.submit-btn .input-data:hover .inner{
+    left: 0;
+}
+.submit-btn .input-data input{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+
+.boton-enviar {
+    padding: 10px;
+    font-size: 16;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #ffffff;
+    background-color: #023529;
+    border: none;
+    border-radius: 45px;
+    width: 100%;
+    box-shadow: 0px 8px 15px #a9c6b0;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+.boton-enviar:hover {
+    background-color:#008F75;
+    box-shadow: 0px 15px 20px #015944;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.boton-enviar:active {
+    transform: translateY(-1px);
+}
+
+
+@media (max-width: 768px){
+    .contacto-box{
+        padding: 25px 10px 10px 10px !important;
+    }
+}
+
+
+ /* termina CONTACTO */
