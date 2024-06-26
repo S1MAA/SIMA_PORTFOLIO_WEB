@@ -292,6 +292,10 @@ margin: 50px 0px 50px 0px;
     .col-1 {
         display: none;
     }
+
+    .info-lista{
+        font-size: 14px !important;
+    }
 }
 
 @media (max-width: 1400px) {
@@ -508,6 +512,10 @@ form .form-row .input-data{
     height: 40px;
     margin: 0 20px;
     position: relative;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 form .form-row .textarea{
     height: 70px;
