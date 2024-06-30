@@ -41,7 +41,7 @@ body {
     position: -webkit-sticky;
     top: 10px;
     margin-bottom: 10px;
-    z-index: 1;
+    z-index: 1000;
 }
 
 .logoheader{
@@ -153,7 +153,6 @@ margin: 50px 0px 50px 0px;
     background: #008F75;
 }
 
-
 .container-cards {
     overflow: auto;
     display: flex;
@@ -202,32 +201,41 @@ margin: 50px 0px 50px 0px;
  /* INDEX */
 
 
+.m-top{
+    margin-bottom: 30px;
+}
+
+.cont-intro{
+    margin: 10% 0% 10% 0%;
+}
 
 
- .h3-title-sec{
+.h3-title-sec{
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 34px;
     color: #FFFFFF;
+    margin: 0px 0px 0px 0px;
+    z-index: 10;
 }
 
 
-img {
+.img-carc {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.container {
+.container-carrusel {
     width: 90%;
-    height: 500px;
+    height: 600px;
     display: flex;
     gap: 10px;
     margin-inline: 50px;
 }
 
-.card {
+.cardsel {
     min-width: 70px;
     height: 100%;
     border-radius: 30px;
@@ -242,11 +250,11 @@ img {
     padding: 110px;
 }
 
-.card:hover {
+.cardsel:hover {
     flex-grow: 7;
 }
 
-.card > .background {
+.cardsel > .background {
     position: absolute;
     inset: 0;
     object-fit: cover;
@@ -256,44 +264,29 @@ img {
     transition: var(--transition-timing) ease;
 }
 
-.card:hover > .background {
+.cardsel:hover > .background {
     filter: brightness(1);
 }
 
-.card > .card-content {
+.cardsel > .card-content {
     display: flex;
     align-items: center;
     position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 20px;
     overflow: hidden;
     transition: var(--transition-timing);
-    z-index: 10;
+    z-index: 1;
 }
 
-.card:hover > .card-content {
+.cardsel:hover > .card-content {
     inset: 20px;
     top: auto;
 }
 
-.card-content > * {
+.cardsel-content > * {
     transition: var(--transition-timing);
 }
 
-.card-content > .profile-image {
-    min-width: 50px;
-    max-width: 50px;
-    height: 50px;
-    border: 1px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.card > .backdrop {
+.cardsel > .backdrop {
     position: absolute;
     left: 0;
     right: 0;
@@ -306,7 +299,7 @@ img {
 .rotatetext {
     position: absolute; /* Posiciona el contenedor en relación a la card */
     bottom: 20px; /* Ajusta la distancia desde la parte inferior */
-    left: 40px; /* Ajusta la distancia desde la parte izquierda */
+    left: 90px; /* Ajusta la distancia desde la parte izquierda */
     width: calc(100% - 40px); /* Ajusta el ancho para mantener márgenes */
     display: flex;
     align-items: center;
@@ -321,8 +314,9 @@ img {
     transition: transform 0.5s;
 }
 
-.card:hover .rotatetext h3 {
+.cardsel:hover .rotatetext h3 {
     transform: rotate(0deg);
+    color: #ffffff;
 }
 /* TERMINA INDEX */
 
@@ -417,6 +411,17 @@ img {
     margin-left: 1%;
 }
 
+@media (max-width: 5000px) {
+
+    .tablet{
+        display: none;
+    }
+
+    .movil{
+        display: none;
+    }
+}
+
 @media (max-width: 1000px) {
     .col-1 {
         display: none;
@@ -425,6 +430,8 @@ img {
     .info-lista{
         font-size: 14px !important;
     }
+
+
 }
 
 @media (max-width: 1400px) {
@@ -432,6 +439,8 @@ img {
         flex: 0 0 31%;
     }
 }
+
+
 
 @media (max-width: 1200px) {
     .card {
@@ -442,16 +451,28 @@ img {
         background-color:#ffffff !important;
         border-radius: 10px 10px 10px 10px !important;
     }
-}
 
-@media (max-width: 768px) {
-    .card {
-        flex: 0 0 95%;
+    .desktop{
+        display: none;
+    }
+
+    .tablet{
+        display: block;
     }
 }
+
 /* FIN CARRUSEL CON CARDS */
 
 @media (max-width: 768px) {
+
+    .movil{
+        display: none;
+    }
+
+    .card {
+        flex: 0 0 95%;
+    }
+
     .rectangulo {
         width: 350px;
         height: 420px;
@@ -543,6 +564,20 @@ img {
     width: 100% !important;
 }
 
+@media (max-width: 577px){
+
+    .tablet {
+        display: none;
+    }
+
+    .movil{
+        display: block;
+    }
+}
+
+
+
+
     .contacto-box{
         padding-left: 10px;
         padding-right: 10px;
@@ -571,6 +606,9 @@ img {
     margin: 10% 0% 10% 0% !important;
 }
 
+.contact-title{
+    margin-left: 20px;
+}
 
 .rectangulo-info{
     width: 100%;
@@ -601,6 +639,10 @@ img {
     font-size: 34px;
     color: #FFFFFF;
     margin-left: 10px;
+    padding-top: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .info-lista{
@@ -799,6 +841,12 @@ form .form-row .textarea{
 @media (max-width: 768px){
     .contacto-box{
         padding: 25px 10px 10px 10px !important;
+    }
+
+    .img-info{
+        width: 24px;
+        height: auto;
+        margin: 10px 20px 20px;
     }
 }
 
