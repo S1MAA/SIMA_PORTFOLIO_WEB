@@ -322,8 +322,50 @@ margin: 50px 0px 50px 0px;
 
 /* DENTRO INDEX: graphic arts */
 
+.sidebar {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 150px;
+    border-radius: 0 10px 10px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: -1;
+}
+.sidebar a {
+    display: block;
+    color: #008F75;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.5s ease;
+    margin-left: 30px;
+    background-color: #ffffff;
+    border-radius: 10px 30px 30px 10px;
+}
+.sidebar a:hover {
+    color: #023529;
+    transform: translateX(30px);
+}
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+section {
+    margin-bottom: 50px;
+    padding-top: 60px; /* Adding padding to avoid overlap with navbar */
+}
 
+.max-h{
+    height: 60% !important;
+    width: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
 
+/* TERMINA GRAPHIC ART*/
 
 
 
@@ -432,6 +474,10 @@ margin: 50px 0px 50px 0px;
     .movil{
         display: none;
     }
+
+    .movil-art{
+        display: none;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -476,6 +522,14 @@ margin: 50px 0px 50px 0px;
 /* FIN CARRUSEL CON CARDS */
 
 @media (max-width: 768px) {
+
+    .descktop-art{
+        display: none;
+    }
+
+    .movil-art{
+        display: block;
+    }
 
     .movil{
         display: none;
