@@ -384,6 +384,14 @@ section {
     background-image: url('../img/INTERACTIVE_TECHNOLOGY/sobot_inicio.png');
 }
 
+.rec-img-uxui{
+    background-image: url('../img/UX_UI/uxui_inicio.webp');
+}
+
+.rec-img-intdev{
+    background-image: url('../img/INTERACTIVE_DEVELOPER/GrimGold_inicio.png');
+}
+
 .video-rounded {
     border-radius: 30px;
     overflow: hidden;
