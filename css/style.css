@@ -433,6 +433,11 @@ section {
 
 /* FOOTER */
 
+.no-style-link {
+    color: inherit; /* Hereda el color del elemento padre */
+    text-decoration: none; /* Elimina la línea debajo del enlace */
+}
+
 .rec-background{
     width: 100%;
     height: 100%;
