@@ -331,7 +331,7 @@ margin: 50px 0px 50px 0px;
     border-radius: 0 10px 10px 0;
     padding-top: 20px;
     padding-bottom: 20px;
-    z-index: -1;
+    z-index: 0;
 }
 .sidebar a {
     display: block;
@@ -355,7 +355,7 @@ margin: 50px 0px 50px 0px;
 }
 section {
     margin-bottom: 50px;
-    padding-top: 60px; /* Adding padding to avoid overlap with navbar */
+    padding-top: 60px; 
 }
 
 .max-h{
@@ -367,6 +367,48 @@ section {
 
 /* TERMINA GRAPHIC ART*/
 
+/* INTERACTIVE DEVELOPER */
+
+.rec-img{
+    width: 100%;
+    height: 500px;
+    background-color: aquamarine;
+    border-radius: 30px;
+    margin-bottom: 5%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.rec-img-intech{
+    background-image: url('../img/INTERACTIVE_TECHNOLOGY/sobot_inicio.png');
+}
+
+.video-rounded {
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 10%;
+}
+
+.video-container{
+    width: 100%;
+    height: 100%;
+}
+
+.rec-int-intdev {
+    background-color: white;
+    border-radius: 30px 5px 30px 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 20px; /* Añade un poco de padding para el contenido */
+}
+
+.img-portfolio{
+    border-radius: 30px;
+    margin-bottom: 10%;
+}
 
 
 

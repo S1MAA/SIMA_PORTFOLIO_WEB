@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>PORTAFOLIO</title>
+
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <!-- ESTO ES EL CSS DE BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ESTO ES EL CSS DE BOOTSTRAP -->
+</head>
+
+<body>
+
+    
+    <!-- HEADER -->
+    <div id="header" class="header-navbar"></div>
+
+
+
+    <!-- Contenido -->
+    <div class="container">
+        <h3 class="h3-title">INTERACTIVE TECHNOLOGY</h3>
+        <div class="rec-img rec-img-intech col-12">
+            <div class="rec-int-intdev">
+                <h3 class="h3-title">SO-BOT</h3>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-md-6 col-sm-12">
+                <p>So-bot es un robot programado con Arduino, diseñado con inspiración en la figura de un dinosaurio. Este proyecto universitario se distingue por su llamativa estética y su objetivo principal de enfrentarse y destruir a otros robots en combates. Equipado con un mecanismo avanzado que permite girar sierras, So-bot combina la tecnología moderna con la ferocidad de los antiguos reptiles, ofreciendo una experiencia emocionante.</p>
+            </div>
+            <div class="col-md-6 col-sm-12 ">
+                <img class="img-fluid img-portfolio" src="../img/INTERACTIVE_TECHNOLOGY/sobot_delantera.jpg">
+            </div>
+        </div>
+        <h3 class="h3-title" style="margin-top: 30px; margin-bottom: 30px;">FUNCIONAMIENTO</h3>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 video-container">
+                <video class="video-rounded" width="100%" height="100%" loop autoplay muted>
+                    <source src="../img/INTERACTIVE_TECHNOLOGY/sobot_proceso.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+            <div class="col-md-6 col-sm-12 video-container">
+                <video class="video-rounded" width="100%" height="100%" loop autoplay muted>
+                    <source src="../img/INTERACTIVE_TECHNOLOGY/sobot_sierras_funcionando.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+        </div>
+        <h3 class="h3-title" style="margin-top: 30px; margin-bottom: 30px;">PROYECTO FINAL</h3>
+        <img src="../img/INTERACTIVE_TECHNOLOGY/sobot_superior.jpg" class="img-fluid img-portfolio">
+        <img src="../img/INTERACTIVE_TECHNOLOGY/sobot_trasera.jpg" class="img-fluid img-portfolio">
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <script>
+        async function loadHTML(id, url) {
+            const response = await fetch(url);
+            const text = await response.text();
+            document.getElementById(id).innerHTML = text;
+        }
+
+        async function initialize() {
+            await loadHTML("header", "header.html");
+            await loadHTML("footer", "footer.html");
+            disableCurrentNavLink();
+            initializeCardClickHandler();
+        }
+
+        function disableCurrentNavLink() {
+            const currentPath = window.location.pathname;
+            console.log("Ruta actual:", currentPath); // Depuración
+
+            const links = document.querySelectorAll(".nav-link");
+
+            links.forEach((link) => {
+                const linkPath = link.getAttribute("href");
+                console.log("Comparando con:", linkPath); // Depuración
+
+                const normalizedCurrentPath = currentPath.replace(/\/$/, "");
+                const normalizedLinkPath = linkPath.replace(/\/$/, "");
+
+                if (normalizedCurrentPath === normalizedLinkPath) {
+                    console.log("Deshabilitando enlace:", linkPath); // Depuración
+                    link.classList.add("disabled");
+                    link.removeAttribute("href");
+                }
+            });
+        }
+
+        function initializeCardClickHandler() {
+            const cardsContainer = document.querySelector(".container");
+
+            if (!cardsContainer) return;
+
+            cardsContainer.addEventListener("click", (e) => {
+                const target = e.target.closest(".card");
+
+                if (!target) return;
+
+                cardsContainer.querySelectorAll(".card").forEach((card) => {
+                    card.classList.remove("active");
+                });
+
+                target.classList.add("active");
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", initialize);
+
+        document.querySelectorAll('.sidebar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                const navbarHeight = document.querySelector('.header-navbar').offsetHeight;
+                const targetPosition = targetElement.offsetTop - navbarHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
